@@ -4,9 +4,38 @@
     font-weight: 400;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Benzin';
+    src: url('./fonts/benzin-medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Benzin';
+    src: url('./fonts/benzin-semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Benzin';
+    src: url('./fonts/benzin-bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Benzin';
+    src: url('./fonts/benzin-extra-bold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
 
 body {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Benzin', sans-serif; 
+    font-weight: 400;
+    background-color: beige;
 }
 
 
