@@ -1,14 +1,22 @@
+*, *::before,*::after {
+    box-sizing: border-box;
+}
+
 @font-face {
     font-family: 'Benzin';
     src: url('./fonts/benzin-regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
+    font-display: swap; /*makes fall back font display when main font is loading */
+    
 }
 @font-face {
     font-family: 'Benzin';
     src: url('./fonts/benzin-medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
+    font-display: swap;
+
 }
 
 @font-face {
@@ -16,6 +24,7 @@
     src: url('./fonts/benzin-semibold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -23,6 +32,7 @@
     src: url('./fonts/benzin-bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -30,14 +40,17 @@
     src: url('./fonts/benzin-extra-bold.ttf') format('truetype');
     font-weight: 800;
     font-style: normal;
+    font-display: swap;
 }
 
 body {
     font-family: 'Benzin', sans-serif; 
+    
     font-weight: 400;
     background-color: rgb(250, 250, 233);
-    width: auto;
+    max-width:1400px;
     margin: 0 auto;
+    padding: 20px;
 }
 
 .title-card {
@@ -46,10 +59,13 @@ body {
 }
 
 .title-card h1 {
-    font-size: 100px;
-    margin: 10px;
-    padding-top: 30px;
-    margin-bottom: -40px;
+    font-size: clamp(2.5rem, 10vw, 6rem); /*makes text responisve when going from different devices*/
+    /*rem -> relative to the root size. the root is html which is default 16 px. 
+    vw-> viewport width which is relative to the viewport of the device being used ex 10vw of 1000px viewport is 100px */
+    margin: 0 0 10px;
+    padding-top: 20px;
+    line-height: .9; /*removes extra vertical space large text carries*/
+    
 }
 
 
@@ -57,11 +73,47 @@ body {
     margin: 5px ;
     margin-bottom: 10px;
 }
+h2{
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
 .title-card p {
-    margin-top: -5px;
-    font-size: x-small;
-    padding-left: 55px;
-    padding-right: 55px;
+    margin:  0;
+    font-size: .8rem;
+    padding: 0 55px;
+}
+
+.secret-sauce {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.secret-sauce h2{
+    margin: 10px 0px 0px;
+    line-height: .5;
+    text-align: center;
+}
+
+.secret-sauce p{
+    text-align: center
+}
+.row {
+  display: flex;
+  flex-wrap: wrap; /*makes it so when its on a phone it wraps into vertical columns*/
+  justify-content: center; /*makes the images centered for horizontal content */
+  gap: 10px;
+    
+}
+
+.column {
+    text-align: center;
+}
+
+.img{
+    max-width: 100%;
+    margin: auto;
 }
 
 
