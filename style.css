@@ -148,5 +148,12 @@ h2{
     transition: opacity 0.5s, transform .5s ease;
 }
 
-
+.recipe-name, .story,.ingredients,.Steps {
+    border-top: 2px solid black;
+    
+    
+}
+.Steps{
+    border-bottom: 2px solid black;
+}
 
